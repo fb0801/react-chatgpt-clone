@@ -71,7 +71,7 @@ if(currentTitle && value && message){
 
 
   const currentChat = previousChats.filter(previousChats => previousChats.title === currentTitle)
-  const uniqueTitles = Array.from(new set (previousChats.map(previousChats => previousChats.title)))
+  const uniqueTitles = Array.from(new Set(previousChats.map(previousChats => previousChats.title)))
 
   return (
     <div className="app">
