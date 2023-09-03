@@ -17,3 +17,5 @@ https://www.toptal.com/developers/gitignore/
 https://platform.openai.com/docs/api-reference
 
 https://github.com/fb0801/JS-chatgpt-clone 
+
+https://fonts.google.com/specimen/Open+Sans?query=open+sans
