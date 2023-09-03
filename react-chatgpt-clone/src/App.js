@@ -1,6 +1,27 @@
-
-
 const App  = () => {
+
+  const getMessages = async () => {
+    const options = {
+      method: "POST",
+      body: JSON.stringify({
+        message: "Hello how are you"
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+
+    }
+    try {
+      const response = await fetch('http://localhost:8000/completions', options)
+      const data = await response.json()
+      console.log(data)
+    } catch (error){
+      console.error(error)
+    }
+  }
+
+  
+
   return (
     <div className="app">
       <section className="side-bar">
@@ -18,8 +39,8 @@ const App  = () => {
         </ul>
         <div className="bottom-section">
           <div className="input-container">
-          <input/>
-          <div id="submit">➢</div>
+          <input id="myInput"/>
+          <div id="submit" onClick={getMessages}>➢</div>
         </div>
         <p className="info">
           CHATGPT version 3.5
