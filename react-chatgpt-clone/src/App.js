@@ -4,6 +4,8 @@ const App  = () => {
 
   const [value, setValue] = useState(null)
   const [message, setMessage] = useState(null)
+  const [previousChats, setPreviousChats] = useState([])
+  const [currentTitle, setCureentTitle] = useState([])
 
   const getMessages = async () => {
     const options = {
@@ -32,6 +34,28 @@ function handleKeyDown(event) {
         console.log('Enter key pressed')
   }
 }
+
+useEffect(() =>{
+if(!currentTitle && value && message) {
+  setCureentTitle(value)
+}
+if(currentTitle && value && message){
+  setPreviousChats(previousChats => (
+    [...previousChats, 
+      {
+        title: currentTitle, 
+        role: "user",
+        content: value
+    }, 
+    {
+      title: currentTitle,
+      role: message.role, 
+      content: message.content
+    }
+  ]
+  ))
+}
+}, [message], currentTitle)
   
 
   return (
