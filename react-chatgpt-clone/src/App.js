@@ -6,6 +6,7 @@ const App  = () => {
       <section className="side-bar">
         <button>+ New Chat</button>
         <ul className="history"></ul>
+        <li>bb</li>
         <nav>
           <p>Made by Farhan</p>
         </nav>
