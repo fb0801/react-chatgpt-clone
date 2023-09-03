@@ -13,8 +13,10 @@ const App  = () => {
     setCureentTitle(null)
   }
 
-  const handleClick = () => {
-    
+  const handleClick = (uniqueTitles) => {
+    setCureentTitle(uniqueTitles)
+    setMessage(null)
+    setValue("")
   }
 
   const getMessages = async () => {
@@ -76,7 +78,7 @@ if(currentTitle && value && message){
       <section className="side-bar">
         <button onClick={createNewChat}>+ New Chat</button>
         <ul className="history"></ul>
-        {uniqueTitles?.map((uniqueTitles, index) =><li key={index}>{uniqueTitles}</li>)}
+        {uniqueTitles?.map((uniqueTitles, index) =><li key={index} onClick={ () => handleClick(uniqueTitles)}>{uniqueTitles}</li>)}
         <nav>
           <p>Made by Farhan</p>
         </nav>
@@ -86,7 +88,7 @@ if(currentTitle && value && message){
         <ul className="feed">
             {currentChat?.map((chatMessage, index) => <li key={index}>
               <p className="role">{chatMessage.role}</p>
-              <p>{chatMessage.message}</p>
+              <p>{chatMessage.content}</p>
             </li>)}
         </ul>
         <div className="bottom-section">
