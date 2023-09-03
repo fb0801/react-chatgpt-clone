@@ -9,7 +9,7 @@ const App  = () => {
     const options = {
       method: "POST",
       body: JSON.stringify({
-        message: "Hello how are you"
+        message: value
       }),
       headers: {
         "Content-Type": "application/json"
@@ -51,7 +51,7 @@ function handleKeyDown(event) {
         </ul>
         <div className="bottom-section">
           <div className="input-container">
-          <input onKeyDown={this.handleKeyDown}/>
+          <input value={value} onKeyDown={this.handleKeyDown} onChange={(e) => setValue(e.target.value)}/>
           <div id="submit" onClick={getMessages}>➢</div>
         </div>
         <p className="info">

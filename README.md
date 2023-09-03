@@ -7,6 +7,8 @@ Chatgpt clone in REACT using this video by <a href="https://www.youtube.com/watc
 
 ## Changes made:
 
+- Similar to the JS version we made user can press enter key to submit query
+
 
 ## Resources used:
 
