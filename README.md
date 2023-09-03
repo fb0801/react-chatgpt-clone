@@ -19,3 +19,5 @@ https://platform.openai.com/docs/api-reference
 https://github.com/fb0801/JS-chatgpt-clone 
 
 https://fonts.google.com/specimen/Open+Sans?query=open+sans
+
+https://www.compart.com/en/unicode/U+27A2

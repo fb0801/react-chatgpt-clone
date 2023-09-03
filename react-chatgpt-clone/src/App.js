@@ -11,7 +11,21 @@ const App  = () => {
           <p>Made by Farhan</p>
         </nav>
       </section>
-      <section className="main"></section>
+      <section className="main">
+        <h1>FarhanGPT</h1>
+        <ul className="feed">
+
+        </ul>
+        <div className="bottom-section">
+          <div className="input-container">
+          <input/>
+          <div id="submit">➢</div>
+        </div>
+        <p className="info">
+          CHATGPT version 3.5
+        </p>
+        </div>
+      </section>
       
     </div>
   );
